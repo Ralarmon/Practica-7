@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+    margin-top:1% ;
+}
+
+body{
+    position:relative;
+    background: orange;
+    color: white;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 90%;
+    margin: 30px auto;
+    text-align: justify;
+}
+
+ul{
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+p{
+    margin-bottom: 15px;
+}
+
+.navegacion a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid white;  
+}
+
+.navegacion li:hover{
+    background-color: darkorange;
+    border-radius: 25px;
+    border-style: solid;
+}
+
+.navegacion li a:hover{
+    color: black;
+}
+
+.lanzador-menu{
+    text-decoration: none;
+    color: white;
+    padding: 6px 10px;
+    background-color: darkorange;
+    border-style: solid;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.lanzador-menu:hover{
+    color:darkorange;
+    background-color:white;
+    box-shadow: 0 0 black;
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .js .navegacion{
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s;
+        position:absolute;
+        top: 40px;
+        left: 30px;
+        right: 30px;
+        background-color: #2D211F;
+    }
+    
+    .js .navegacion a{
+        padding: 5px 10px;
+        color: #FFF;
+        border-top: 1px solid rgba (255, 255, 255, 0.4);
+    }
+
+    .js .navegacion.menu-desplegado{
+        max-height: 250px;
+    }
+}
+
+@media screen and (min-width:601px) {
+
+    .lanzador-menu{
+        display: none;
+    }
+
+    .navegacion{
+        position: absolute;
+        top:-70px;
+    }
+    
+    body{
+        margin-top: 60px;
+    }
+
+    .navegacion li{
+        display: inline-block;
+        margin-right: 15px;
+    }
+
+}
